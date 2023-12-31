@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import moment from "moment";
 
-const BlogTwo = () => {
+const BlogTwo = ({blog}) => {
   return (
     <div className="group grid grid-cols-12 gap-4 items-center text-dark dark:text-light">
       <Link
@@ -10,7 +11,7 @@ const BlogTwo = () => {
         className=" col-span-12  lg:col-span-4 h-full rounded-xl overflow-hidden"
       >
         <Image
-          src={"/blogs/roman-synkevych-vXInUOv1n84-unsplash.jpg"}
+          src={blog.image}
           //   placeholder="blur"
           //   blurDataURL={blog.image.blurhashDataUrl}
           alt={"blog two"}
@@ -25,19 +26,19 @@ const BlogTwo = () => {
         <span className="inline-block w-full uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
           {/* {blog.tags[0]} */}
         </span>
-        <Link href={"/#"} className="inline-block my-1">
+        <Link href={`/blog/${blog.slug}`} className="inline-block my-1">
           <h2 className="font-semibold capitalize text-base sm:text-lg">
             <span
               className="pb-1 bg-gradient-to-r from-black  to-black  bg-[length:0px_6px]
                 group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
             >
-              Best Practices For Writing Clean And Maintainable Code
+              {blog.title}
             </span>
           </h2>
         </Link>
 
         <span className="inline-block w-full capitalize text-custome-gray dark:text-light/50 font-semibold  text-xs sm:text-base">
-          January 02, 2023
+          {moment(blog.date).format("LL")}
         </span>
       </div>
     </div>

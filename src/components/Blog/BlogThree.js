@@ -1,13 +1,14 @@
+import moment from 'moment'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const BlogThree = ({blog}) => {
   return (
-    <div className="group flex flex-col items-center text-dark dark:text-light">
-    <Link href={"/"} className="h-full rounded-xl overflow-hidden">
+    <div className="group flex flex-col items-center text-dark">
+    <Link href={`/blog/${blog.slug}`} className="h-full rounded-xl overflow-hidden">
       <Image
-        src={"/blogs/lauren-mancke-aOC7TSLb1o8-unsplash.jpg"}
+        src={blog.image}
         // placeholder="blur"
         // blurDataURL={blog.image.blurhashDataUrl}
         alt={blog.title}
@@ -22,7 +23,7 @@ const BlogThree = ({blog}) => {
       {/* <span className="uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
         {blog.tags[0]}
       </span> */}
-      <Link href={"/"} className="inline-block my-1">
+      <Link href={`/blog/${blog.slug}`} className="inline-block my-1">
         <h2 className="font-semibold capitalize  text-base sm:text-lg">
           <span
             className="pb-1 bg-gradient-to-r from-black to-black  
@@ -35,7 +36,7 @@ const BlogThree = ({blog}) => {
       </Link>
 
       <span className="capitalize text-custome-gray dark:text-light/50 font-semibold text-sm  sm:text-base">
-        {blog.date}
+        {moment(blog.date).format("LL")}
       </span>
     </div>
   </div>

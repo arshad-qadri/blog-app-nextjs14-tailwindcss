@@ -1,3 +1,4 @@
+import { menuItem } from "@/utils";
 import Link from "next/link";
 import React from "react";
 import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
@@ -7,7 +8,7 @@ const Footer = () => {
     <div className="w-fll min-h-56 bg-gray-900 sm:px-10 px-4 pt-8 pb-3 text-white">
       <div className="grid grid-cols-3 order-2">
       <div className="md:col-span-2 col-span-4 flex justify-center items-center flex-col">
-          <h2 className="md:text-2xl text-xl font-bold text-center">
+          <h2 className="md:text-2xl xs:text-xl text-md font-bold text-center mb-2 xs:mb-0">
             Interesting Stories | Updates | Guides
           </h2>
           <p className="text-center">
@@ -20,8 +21,8 @@ const Footer = () => {
           </form>
         </div>
         <div className="md:col-span-1 col-span-4 md:col-end-4  row-start-1 mb-5 md:mb-0">
-          <div className="flex md:justify-center items-center md:flex-col justify-between">
-          <div>
+          <div className="flex md:justify-center items-center md:flex-col xs:flex-row flex-col justify-between">
+          <div className="xs:mb-0 mb-4 ">
             <Link href={"/"} className="font-bold">
               <span className="text-white text-2xl">EZ</span>
               <span className="text-white text-lg">writer</span>
@@ -29,15 +30,14 @@ const Footer = () => {
           </div>
           <div>
             <ul className="md:mt-5 flex  justify-center items-center gap-x-3 md:flex-col">
-              <li className="text-white hover:underline md:mb-2">
-                <Link href={"/"}>Home</Link>
+              {menuItem.map((item,index)=>(
+
+              <li className="text-white hover:underline md:mb-2" key={index}>
+                <Link href={item.link}>{item.label}</Link>
               </li>
-              <li className="text-white hover:underline md:mb-2">
-                <Link href={"/"}>About</Link>
-              </li>
-              <li className="text-white hover:underline md:mb-2">
-                <Link href={"/"}>Contact</Link>
-              </li>
+              ))}
+              
+              
             </ul>
           </div>
           </div>
