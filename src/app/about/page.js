@@ -42,7 +42,7 @@ const page = () => {
           At EZwrite, our mission is to empower individuals and businesses to
           share their stories, ideas, and expertise with the world effortlessly.
           We believe that everyone has a unique voice that deserves to be heard,
-          and we've built a platform that makes it easy for you to unleash your
+          and we&#39;ve built a platform that makes it easy for you to unleash your
           creativity through the art of writing.
         </p>
       </div>
@@ -73,9 +73,9 @@ const page = () => {
         <p className="text-xl leading-10">
           Your satisfaction and success are at the heart of what we do. We are
           committed to providing top-notch support, continuous updates, and
-          innovative features that enhance your writing journey. EZwrite isn't
-          just a tool; it's a community of passionate writers and creators, and
-          we're excited to have you as part of it.
+          innovative features that enhance your writing journey. EZwrite isn&#39;t
+          just a tool; it&#39;s a community of passionate writers and creators, and
+          we&#39;re excited to have you as part of it.
         </p>
         <p className="text-xl leading-10 mt-4">
           Join us on this exciting adventure of words, imagination, and
