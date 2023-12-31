@@ -6,7 +6,7 @@ import React from "react";
 const getData = async (slug) => {
   let data = null;
   await axios
-    .get("http://localhost:3000/blog.json")
+    .get("https://res.cloudinary.com/dsdcsntrd/raw/upload/v1704028105/json/blog_sgbfyw.json")
     .then((response) => {
       // data = response.data?.blogPosts.filter((item) => item.slug === slug)[0];
       data = response.data

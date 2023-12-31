@@ -3,8 +3,8 @@ import FeaturedPost from "@/components/Home/FeaturedPost";
 import RecentPost from "@/components/Home/RecentPost";
 
 const getData = async () => {
-
-  const res1 = fetch("http://localhost:3000/blog.json");
+  // const res1 = fetch("http://localhost:3000/blog.json");
+  const res1 = fetch("https://res.cloudinary.com/dsdcsntrd/raw/upload/v1704028105/json/blog_sgbfyw.json");
   const res2 = (await res1).json();
   return res2;
 };
