@@ -1,0 +1,15 @@
+export const siteMetaData = {
+    title:"EZwrite - Simplifying Blogging for You",
+    description:"Write effortlessly with EzWrite, your intuitive blogging companion. Streamlined for simplicity, our app lets you focus on what you do best – creating content. Explore a hassle-free writing experience with EzWrite and share your thoughts with the world in just a few clicks!",
+    keyword:"EZwrite, Effortless Blogging App, Easy Writing, Seamless Content Creation, Intuitive Blogger Experience, Simple Sharing, Creative Expression, User-Friendly Platform, Instant Convenience, EZwrite App",
+    author:"EZwrite",
+    language:"en-us",
+    siteUrl:"https://ezwrite.vercel.app",
+    siteLogo:"/ezwrite.png",
+    email:"ezwrite@example.com",
+    socialBanner:"http://www.example.com/test.png",
+    github:"http://github.com/",
+    facebook:"http://www.facebook.com",
+    linkedin:"http://www.linkedin.com",
+    locale:"en-US",
+}
